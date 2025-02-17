@@ -132,5 +132,3 @@ This document is formatted using **Quarto's powerful features** to ensure a **st
 ::: callout-note
 This document is designed using various Quarto features to enhance readability and professionalism.
 :::
-
-test1
