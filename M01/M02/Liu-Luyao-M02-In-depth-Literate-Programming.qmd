@@ -121,6 +121,12 @@ quarto publish quarto-pub literate-programming.qmd --title "M02-In-depth Literat
 ```
 :::
 
+::: callout-note
+I also tried to using github action to pipeline the quarto publish workflow\
+Reference: \
+- https://quarto.org/docs/publishing/quarto-pub.html#github-action
+:::
+
 References
 
 ::: callout-important
