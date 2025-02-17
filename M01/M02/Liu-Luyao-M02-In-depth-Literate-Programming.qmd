@@ -128,19 +128,17 @@ I am now better equipped to navigate SEO complexities, **drive traffic**, improv
 # Publishing Details {#sec-publishing}
 
 ::: callout-note
-I tried to using github action to pipeline the quarto publish workflow\
+I tried to using github action to pipeline the quarto publish workflow, here is the link of Quarto pub:
+
+<https://stacey678.quarto.pub/m02-in-depth-literate-programming/>
+
+\
 Reference:\
 - https://quarto.org/docs/publishing/quarto-pub.html#github-action
-:::
-
-References
-
-::: callout-important
-This document is formatted using **Quarto's powerful features** to ensure a **structured, professional, and visually appealing** presentation.
 :::
 
 ## References
 
 ::: callout-note
-This document is designed using various Quarto features to enhance readability and professionalism.
+https://quarto.org/docs/publishing/quarto-pub.html#github-action
 :::
