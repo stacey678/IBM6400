@@ -1,0 +1,138 @@
+---
+title: "M01-2-Introduction to Literate Programming-Application Assignment"
+author: "Luyao Liu"
+date: '`r format(Sys.time())`'
+format: 
+  html: 
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    code-line-numbers: true
+    code-fold: false
+    code-link: true
+    embed-resources: true
+editor: visual
+execute: 
+  freeze: auto
+  warning: false
+---
+```{R}
+library(ggplot2)
+library(dplyr)
+```
+
+# 1. Create a variable called X and assign the text
+
+**Creat variable X**
+```{r}
+# Assigning text to variable X
+X <- "This is my first assignment"
+```
+
+# 2. Text Manipulation
+
+## 2.1 Explore paste()
+
+* Examples base R string functions*:
+```{r}
+# paste() vs paste0() comparison
+paste("Hello", "World", sep = "_")    # Output: "Hello_World"
+paste0("Case", 1:3)                   # Output: "Case1" "Case2" "Case3"
+```
+
+## 2.2 Updating X 
+```{r}
+X_updated <- paste(X, "and I'm loving it!")
+```
+
+# 3. Vector Operations 
+```{r}
+Y <- c(2, 3, 4, 5) * 2  # Direct element-wise multiplication
+```
+
+
+# 4. Print variables X and Y
+```{r}
+# Display values of X and Y
+X
+Y
+```
+
+# 5. Max and min of vector Y
+```{r}
+# Calculate maximum and minimum values
+max(Y)
+min(Y)
+```
+
+# 6. Load ggplot2 and view economics data
+```{r}
+library(ggplot2)
+head(economics)
+```
+
+# 7. Economics data visualization
+```{r}
+# Create scatter plot of unemployment vs. median unemployment duration
+plot <- ggplot(economics, aes(x = unemploy, y = uempmed)) +
+  geom_point() +
+  labs(title = "Unemployment vs. Median Unemployment Duration",
+       x = "Number of Unemployed (thousands)",
+       y = "Median Duration (weeks)")
+plot
+```
+
+# 8. Enhanced Visualization 
+
+```{r}
+#| label: fig-unemployment
+#| fig-cap: "Unemployment trends (cross-reference @fig-unemployment)"
+#| fig-width: 5
+#| fig-aspect-ratio: 0.6
+
+library(dplyr)   # Essential for pipe
+library(ggplot2) # Visualization
+
+economics %>%
+  ggplot(aes(x = unemploy/1000, y = uempmed)) +  # Proper scaling
+  geom_point(alpha = 0.6, color = "navyblue") +
+  labs(
+    title = "Unemployment Analysis",
+    x = "Unemployed (Thousands)",
+    y = "Median Duration (Weeks)",
+    caption = "Source: ggplot2 Economics Dataset"
+  )
+```
+
+# 9. Key Findings 
+
+::: {.callout-note}
+#| icon: false
+As shown in @fig-unemployment, there's a clear positive correlation between unemployment numbers and duration. This suggests:
+- Labor market saturation during high unemployment
+- Potential skills mismatch in economic downturns
+- Need for policy interventions during prolonged unemployment
+:::
+
+# 10. Formatting Summary 
+
+1. **Hierarchical Headings**: Used `#`, `##`, `###` for document structure  
+2. **Text Emphasis**:  
+   - **Bold** for variable definitions  
+   - *Italics* for conceptual explanations  
+3. **Callouts**:  
+   - `callout-tip` for best practices  
+   - `callout-note` for observations  
+   - `callout-important` for critical reminders  
+4. **Code Integration**:  
+   - `blockquote` formatting for code context  
+   - Backticks (`) for function references like `paste()`  
+5. **Cross-referencing**: Implemented via `@fig-label` system  
+6. **Chunk Control**: Used `#|` options for figure sizing and labels  
+7. **List Structures**: Bullet points for findings and numbered lists for summaries  
+8. **Visual Consistency**: Color-coded geoms and proper axis scaling  
+9. **Dependency Management**: Explicit package loading within chunks  
+10. **Semantic Markers**: Font Awesome icons for visual cues
+:::
+
+
