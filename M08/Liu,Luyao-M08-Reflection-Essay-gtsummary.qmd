@@ -1,0 +1,133 @@
+---
+title: "Summary Tables with gtsummary"
+subtitle: "Revealjs Presentation"
+author: "Luyao Liu"
+institute: "IBM 6400, Cal Poly Pomona"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    theme: serif
+    width: 1600
+    height: 900
+    footer: MSBA Culminating Experience Project
+    transition: slide
+    transition-speed: default
+    incremental: false
+    toc: true
+    toc-depth: 1
+    slide-number: true
+    scrollable: true
+    smaller: true
+    code-fold: false
+    code-overflow: wrap
+    number-sections: false
+    number-depth: 5
+    embed-resources: true
+    css: styles.css
+editor: visual
+execute: 
+  echo: true
+  freeze: auto
+---
+
+## Step 1: Summary of gtsummary Package
+
+The `{gtsummary}` package helps create clean, publication-ready summary tables in R. Key capabilities include:
+
+-   Creating descriptive statistics tables with `tbl_summary()`
+-   Auto-detecting variable types (categorical vs continuous)
+-   Adding p-values using `add_p()`
+-   Customizing variable labels and statistics
+-   Exporting tables to Word, PDF, and HTML formats
+
+**Benefits for School or Career:**
+
+\- Produces high-quality statistical tables quickly
+
+\- Useful for theses, capstones, and research reports
+
+ - Time-saving in professional settings for clinical, business, or data reports
+
+------------------------------------------------------------------------
+
+## Step 2: Advanced Features from Dr. Sjoberg’s Presentation
+
+### 2.1: Comparison: `gtsummary` vs `gt` vs `gtExtras`
+
+| Package | Purpose | Ideal Use Case |
+|----------------|-------------------------|--------------------------------|
+| `gt` | Table creation | Custom formatted tables |
+| `gtExtras` | Visual/table enhancements | Aesthetic boosts to `gt` tables |
+| `gtsummary` | Statistical summary/reporting | Quick, clear statistical analysis tables |
+
+### 2.2: Three New Insights from Dr. Sjoberg:
+
+1.  You can pipe model objects (e.g., `lm()`, `glm()`) into `tbl_regression()` for instant regression tables.
+2.  `gtsummary` integrates well with `tidymodels`, enabling efficient ML reporting.
+3.  You can layer functions to customize output, such as changing CI display or exponentiating coefficients.
+
+------------------------------------------------------------------------
+
+## Step 3: Cross-tabulation (City vs. Service Rating)
+
+We test whether **City** and **Overall rating** are associated. We first categorize `Overall` into groups.
+
+```{r}
+# Load necessary libraries
+library(gtsummary)
+library(dplyr)
+
+# Load your data (assuming it's already read into R as df)
+df <- readxl::read_excel("Google_combined.xlsx", sheet = "Google3")
+
+# Convert Overall rating to categorical for cross-tab
+df <- df %>%
+  mutate(Service_cat = case_when(
+    Service <= 2 ~ "Low",
+    Service >= 3 ~ "High",
+    TRUE ~ NA_character_
+  ))
+
+# Cross-tabulation: City vs. Service category
+df %>%
+  select(City, Service_cat) %>%
+  tbl_summary(by = City, missing = "no") %>%
+  add_p() %>%
+  bold_labels()
+```
+
+To run a chi-square test independently:
+
+```{r}
+chisq.test(table(df$City, df$Service_cat))
+```
+
+\*\*Interpretation:\*\*
+
+-   If `p < 0.05`, the distribution of service ratings differs significantly by city.
+-   If `p >= 0.05`, there’s no statistically significant association.
+
+---
+
+## Step 4: Multiple Regression (Overall \~ Food + Service + Atmosphere)
+
+We use `Overall` as the dependent variable and predict it using `Food`, `Service`, and `Atmosphere`.
+
+Let’s predict `Overall` based on `Food`, `Service`, and `Atmosphere`.
+
+``` r
+# Linear regression model
+model <- lm(Overall ~ Food + Service + Atmosphere, data = df)
+
+# Create a gtsummary regression table
+tbl_regression(model) %>%
+  bold_labels()
+```
+
+**\*\*Interpretation:\*\***
+
+**- Each coefficient tells how a one-unit change in the predictor affects the overall rating.**
+
+**- Significant p-values (typically \< 0.05) indicate strong evidence of effect.**
+
+**- Positive coefficients = improvement in \`Overall\` with better scores.**

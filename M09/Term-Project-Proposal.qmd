@@ -1,0 +1,128 @@
+---
+title: "Optimizing Digital Strategies for Kyochon Chicken"
+author: "Luyao Liu"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    page-layout: full
+---
+
+## 
+
+# 🏠 About Me
+
+Hi, I'm Luyao Liu, a graduate student in the MSBA program at Cal Poly Pomona. I'm passionate about leveraging data analytics to uncover insights that inform marketing strategy and drive business performance. This website highlights my current work with Kyochon Chicken in the U.S. market.
+
+---
+
+# 📊 Digital Marketing Projects
+
+## **Optimizing Digital Strategies for Kyochon Chicken**
+
+📌 Data and Source - **Customer Reviews:** Google and Yelp reviews for sentiment and perception analysis - **Website & Social Media:** Kyochon and competitors’ websites, SEO/SEM performance, and social media activities - **Market Reports:** IBISWorld, Precedence Research, and Statista data on U.S. fast food and casual dining - **Internal Observations:** Brand touchpoints, pricing models, and customer service channels
+
+🔎 Managerial Problem Kyochon is a globally recognized brand in Korean fried chicken but struggles to gain mainstream traction in the U.S. While competitors like bb.q Chicken capitalize on cultural promotion and digital visibility, Kyochon’s U.S. strategy lacks differentiation, optimized digital presence, and localized audience targeting.
+
+🎯 Target Audience - Executive leadership (CEO, CMO) - Marketing managers - Digital strategy teams and franchise developers**Research Questions/Objectives:** - What market segments are most promising in LA Metro? - How effective is Kyochon’s digital presence compared to competitors? - What do customer reviews reveal about brand perception? - What digital tactics can drive better engagement and ROI?
+
+❓ Research Questions/Objectives 1. How can Kyochon reposition itself to stand out in a saturated Korean fried chicken market? 2. What are the most valuable customer segments in LA’s fast-casual dining space? 3. How does sentiment about Kyochon compare with key competitors? 4. What digital strategies can improve brand engagement and conversion?
+
+### 💥 Expected Business Impact
+
+-   Enhanced customer engagement through targeted content and campaigns
+-   Improved conversion rates via optimized digital touchpoints
+-   Greater brand loyalty through value-driven differentiation
+-   Strategic roadmap to scale Kyochon’s presence in U.S. markets
+
+------------------------------------------------------------------------
+
+# 📈 Marketing Analytics Projects
+
+## AO1: Market Segmentation & Competitive Analysis
+
+-   **Frameworks:** Porter’s Five Forces, GIS Mapping, Kotler’s Segmentation Model
+
+-   **Tools & Sources:** Demographics from Census data, Nielsen psychographics, and heat maps for location analysis
+
+-   **Insights:** Identified five core customer segments—Urban Professionals, K-Culture Enthusiasts, Health-Conscious Millennials, Families, and Delivery-First Diners. GIS revealed underserved suburban markets for potential expansion.
+
+## AO2: Digital Marketing Audit
+
+-   **Frameworks:** AIDA Model, Chaffey’s Digital Marketing Audit
+-   **Audits:** Website speed, content engagement, keyword optimization, backlink strength, mobile UX
+-   **Gaps Found:** Low SEO performance, limited email personalization, underutilized influencer marketing, and a lack of cross-platform content strategies
+
+## AO3: Brand Sentiment & Perception
+
+-   **Tools:** Natural Language Processing (NLP), word clouds, sentiment scores
+-   **Findings:** Positive feedback on food quality and flavor, but concerns over pricing and service speed. Compared with competitors, Kyochon showed strong product differentiation but weaker emotional brand affinity.
+
+## AO4: Strategic Recommendations
+
+-   **Frameworks:** Marketing Funnel, Customer Journey Mapping
+-   **Recommendations:**
+    -   Launch loyalty app to increase retention
+    -   Boost local SEO and Google My Business optimization
+    -   Partner with micro-influencers in food and K-culture niches
+    -   Add plant-based and fusion items to reach health-focused and diverse food audiences
+
+------------------------------------------------------------------------
+
+# 📽️ RevealJS Presentation
+
+```{=revealjs}
+```
+## Kyochon Strategy Reveal
+
+### Problem
+
+-   Limited U.S. brand awareness
+-   Poor digital discoverability
+-   Strong competitors like bb.q Chicken and Wingstop
+
+### Objectives
+
+-   Understand LA market dynamics
+-   Improve brand perception
+-   Drive conversion via digital channels
+
+### Data Sources
+
+-   Yelp & Google reviews (scraped)
+-   IBISWorld & Statista reports
+-   SEO audits & website performance tools
+
+### 
+
+### Key Insights
+
+-   SEO needs overhaul (missing H1 tags, poor mobile indexing)
+-   Social media underutilized (not on TikTok or YouTube)
+-   Pricing creates a barrier in a value-sensitive market
+
+### Strategic Fixes
+
+-   Develop SEO-rich landing pages
+-   Expand influencer partnerships
+-   Personalize email campaigns
+-   Launch localized promotions via Instagram Stories & TikTok
+
+### Business Outcomes
+
+-   Higher local visibility
+-   Broader market reach beyond niche demographics
+-   Improved repeat purchases and loyalty
+
+### Thank You
+
+Contact: Luyaoliu@cpp.edu
+
+::: {.callout-note}
+## Published
+https://stacey678.quarto.pub/optimizing-digital-strategies-for-kyochon-chicken/
+:::
+
+
+```         
+```

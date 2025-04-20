@@ -1,0 +1,88 @@
+---
+title: "M05-Visualizing Data with Tables for MSDM CEP"
+author: "Luyao Liu"
+date: '`r format(Sys.time())`'
+format: 
+  html: 
+    toc: true
+    number-sections: true
+    code-link: true
+    embed-resources: true
+editor: visual
+execute: 
+  freeze: auto
+---
+
+# Summary of Learnings from the Video
+
+The video demonstrated how the \*\*gt\*\* and \*\*gtExtras\*\* packages in R enhance the presentation of data tables. The \*\*gt\*\* package provides an intuitive way to create well-structured tables, while \*\*gtExtras\*\* extends its capabilities with additional styling features, including color-coding, sparklines, and heatmaps. The tutorial showed how to transform raw data into visually appealing and highly informative tables, which can be customized for different audiences.
+
+# What I Liked About gt and gtExtras
+
+I particularly appreciated the ease of formatting that \*\*gt\*\* provides. The package makes it simple to add \*\*titles, subtitles, source notes, and footnotes\*\*, which improve readability and context. Meanwhile, \*\*gtExtras\*\* allows for \*\*interactive visual elements\*\* within tables, such as embedding \*\*mini bar charts, conditional color scales, and emojis\*\* to enhance storytelling. These features make tables not only informative but also visually engaging.
+
+\# The Role of Tables in Data Visualization
+
+While charts and graphs are powerful for illustrating trends and comparisons, tables provide detailed \*\*numeric insights\*\* that charts may lack. Tables help convey \*\*exact values\*\*, making them useful when precision is necessary. They are particularly effective in scenarios where the audience needs to \*\*analyze multiple variables\*\* simultaneously.
+
+# When to Use Tables Over Charts
+
+-   \*\*When precision is required\*\* (e.g., financial reports, statistical summaries).
+-   \*\*When comparing multiple attributes\*\* across different categories.
+-   \*\*For structured data that is easier to read in tabular form\*\* (e.g., ranked lists, performance metrics).
+-   \*\*When space is limited\*\*, and a chart might be overwhelming or cluttered.
+
+```{r}
+# Load required packages
+library(dplyr)
+library(gt)
+library(gtExtras)
+
+# Create the dataset
+kyochon_data <- tibble::tibble(
+  Location = c("Koreatown", "Buena Park", "Rowland Heights"),
+  Avg_Star_Rating = c(4.5, 4.2, 4.3),
+  Positive_Reviews = c(75, 68, 70),
+  Negative_Reviews = c(10, 15, 13),
+  Engagement_Rate = c(8.5, 7.2, 6.8),
+  Avg_Review_Length = c(25, 23, 20)
+)
+
+# Generate the formatted table
+kyochon_data %>%
+  gt() %>%
+  tab_header(
+    title = "Kyochon Chicken: Digital Marketing Performance",
+    subtitle = "Customer Sentiment and Engagement Metrics by Location"
+  ) %>%
+  cols_label(
+    Location = "Store Location",
+    Avg_Star_Rating = "Avg Star Rating",
+    Positive_Reviews = "Positive Reviews (%)",
+    Negative_Reviews = "Negative Reviews (%)",
+    Engagement_Rate = "Engagement Rate (%)",
+    Avg_Review_Length = "Avg Review Length (words)"
+  ) %>%
+  fmt_number(
+    columns = c(Avg_Star_Rating, Engagement_Rate),
+    decimals = 2
+  ) %>%
+  fmt_percent(
+    columns = c(Positive_Reviews, Negative_Reviews),
+    scale_values = FALSE
+  ) %>%
+  data_color(
+    columns = Engagement_Rate,
+    colors = scales::col_numeric(
+      palette = c("#FFDDC1", "#FC8D59", "#D73027"),
+      domain = NULL
+    )
+  ) %>%
+  tab_source_note(
+    source_note = "Data collected from Google and Yelp reviews."
+  ) %>%
+  tab_footnote(
+    footnote = "Engagement Rate reflects social interactions on digital platforms.",
+    locations = cells_column_labels(columns = Engagement_Rate)
+  )
+```

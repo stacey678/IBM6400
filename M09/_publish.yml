@@ -1,0 +1,4 @@
+- source: Term-Project-Proposal.qmd
+  quarto-pub:
+    - id: 2ec349c5-e45f-41b0-9426-b762180fbcf7
+      url: https://stacey678.quarto.pub/optimizing-digital-strategies-for-kyochon-chicken

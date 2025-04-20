@@ -1,0 +1,181 @@
+---
+title: "MSDM CEP: Data Cleaning and Labelled Data"
+subtitle: "Proposal Presentation"
+author: "Luyao Liu"
+institute: "IBM 6400, Cal Poly Pomona"
+date: "2025-03-27"
+format: 
+  revealjs:
+    theme: serif
+    width: 1600
+    height: 900
+    footer: MSDM CEP Presentation • CPP
+    transition: slide
+    transition-speed: default
+    incremental: false
+    toc: true
+    toc-depth: 1
+    slide-number: true
+    scrollable: true
+    smaller: true
+    code-fold: false
+    code-overflow: wrap
+    number-sections: false
+    number-depth: 5
+    embed-resources: true
+    css: styles.css
+editor: visual
+execute: 
+  echo: true
+  freeze: auto
+---
+
+## Setup Instructions and Project Structure
+
+**Prompt:**\
+*Start a new project and Quarto file (.qmd) as you learned previously.\
+Create a folder for this workshop on your hard drive. You may call it "M06" under the course folder (e.g., Course folder \> M06). Organize your file structure using an appropriate application on your computer (i.e., Windows's Windows Explorer or MacBook's File Finder).\
+Start a new project in RStudio and select the previously created folder (i.e., M06) as the project folder. This will create an Rproj file automatically. This is the file you want to open first the next time you open up the project, not the codebook, such as a QMD file.\
+Start a qmd file and save the file appropriately (e.g., "Jung, Jae-M06-Reflection Essay-Adv Data-Wrangling.qmd") in the "M06" folder.\
+Set your working directory to "M06" by navigating to "Session" \> "Set Working Directory" \> "Choose Directory..."\
+Note: If you created an Rproj file prior to saving your codebook, you don't need to worry about working directory as RStudio will automatically make the folder where your Rproj file is located as the working directory.\
+Add the YAML header like the example below.*
+
+# Essay Prompts
+
+## What is labelled data?
+
+### Prompt:
+
+What is labelled data?
+
+### Response:
+
+Labelled data is a dataset in which each data point is paired with a corresponding tag, category, or value that describes its meaning or intended output. In supervised machine learning, these labels are crucial because they provide the ground truth that models use to learn the mapping from input to output. For instance, in an image classification task, each image may be tagged with labels such as "cat" or "dog," enabling the algorithm to learn and later predict these categories accurately.
+
+## Does your MSDM CEP involve labelled data? Explain why or why not.
+
+### Prompt:
+
+Does your MSDM CEP involve labelled data? Explain why or why not.
+
+### Response:
+
+-   My MSDM Culminating Experience Project (CEP) involves indirectly working with labelled data. While it does not utilize exhaustively annotated datasets, the project leverages star ratings embedded in customer reviews as implicit labels. These ratings provide a measure of customer sentiment, which is crucial for sentiment analysis and exploratory data analysis. Hence, although the data is not fully labelled in the traditional sense, the available labels are instrumental in deriving meaningful insights about customer behavior and preferences.
+
+```{=html}
+<!-- Speaker Notes:
+Although star ratings act as labels, our analysis primarily revolves around unsupervised techniques to mine sentiment from text.
+-->
+```
+
+------------------------------------------------------------------------
+
+## In Step 1, you saw two videos, one showing initial data cleaning and two showing further cleaning. Describe the two processes.
+
+### Prompt:
+
+In Step 1, you saw two videos, one showing initial data cleaning and two showing further cleaning. Describe the two processes.
+
+### Response:
+
+The **initial data cleaning process** involves importing the raw data and addressing basic issues such as missing values and inconsistent formatting. The primary goal is to create a structurally consistent dataset by correcting obvious errors and ensuring the data is in a usable format. In contrast, the **further cleaning process** is more detailed and rigorous. It includes steps like removing duplicate entries, filtering out outliers, normalizing data, and performing feature extraction. This stage focuses on enhancing data quality significantly, which may result in a reduced sample size but ensures that the remaining data is reliable and suitable for in-depth analysis.
+
+<!-- Manual Incremental List: each point will appear one by one -->
+
+```{=html}
+<!-- Speaker Notes:
+The initial cleaning sets the stage by ensuring data consistency, while the further cleaning refines the dataset for deeper analysis.
+-->
+```
+
+------------------------------------------------------------------------
+
+## What are the big differences between the two? How do the differences result in the differences in the final sample size?
+
+### Prompt:
+
+What are the big differences between the two? How do the differences result in the differences in the final sample size?
+
+### Response:
+
+The main difference between the initial and further data cleaning processes is the degree of stringency. The **initial cleaning** is relatively lenient; it corrects only the most evident issues to preserve as much of the original data as possible. The **further cleaning** applies more stringent criteria—eliminating duplicates, outliers, and any anomalies—which greatly improves the overall quality and consistency of the dataset. Consequently, the initial process retains a larger volume of data, while the further cleaning process, by discarding problematic data points, results in a smaller but more reliable final sample size.
+
+<!-- Fragment: Each bullet appears step-by-step -->
+
+```{=html}
+<!-- Speaker Notes:
+The significant reduction in sample size after further cleaning is due to the removal of inconsistent or low-quality entries.
+-->
+```
+
+------------------------------------------------------------------------
+
+# Side-by-Side Comparison
+
+::::: columns
+::: column
+### Initial Cleaning
+
+-   Import data\
+-   Basic formatting\
+-   Handle missing values\
+-   Minimal data loss
+:::
+
+::: column
+### Further Cleaning
+
+-   Remove duplicates\
+-   Outlier detection\
+-   Normalize data\
+-   Reduced sample size for quality
+:::
+:::::
+
+```{=html}
+<!-- Speaker Notes:
+This columns layout visually contrasts the two cleaning phases for clarity.
+-->
+```
+
+------------------------------------------------------------------------
+
+# Asides & Footnotes
+
+> **Aside:** High-quality data is critical for robust analytics.
+>
+> *Footnote:* For more details, see Liu (2020) on data cleaning techniques.
+
+```{=html}
+<!-- Speaker Notes:
+Asides and footnotes provide extra context without overcrowding the main slide content.
+-->
+```
+
+------------------------------------------------------------------------
+
+# Final Thoughts
+
+-   **Labelled data** is key for supervised tasks.
+-   Our CEP uses **implicit labels** (star ratings) but focuses on text mining.
+-   Advanced cleaning enhances data quality—even if it reduces the overall sample size.
+
+```{=html}
+<!-- Speaker Notes:
+Summing up, our approach balances the use of available labelled elements with rigorous data cleaning for reliable insights.
+-->
+```
+
+------------------------------------------------------------------------
+
+# References
+
+-   Liu, B. (2020). *Sentiment Analysis: Mining Opinions, Sentiments, and Emotions*. Cambridge University Press.
+-   Kotler, P., & Keller, K. L. (2022). *Marketing Management*. Pearson.
+
+```{=html}
+<!-- Speaker Notes:
+These references support our discussion on data cleaning and labelled data methodologies.
+-->
+```

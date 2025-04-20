@@ -1,0 +1,155 @@
+---
+title: "M06-Reflection Essay-Advanced Data Wrangling"
+author: "Luyao Liu"
+date: '`r format(Sys.time(), "%B %d, %Y")`'
+format: 
+  html:
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    code-link: true
+    code-tools: true
+    code-overflow: scroll
+    embed-resources: true
+    theme: cosmo
+editor: visual
+execute: 
+  freeze: auto
+---
+
+# Reflection Essay
+
+## Impressions of Revealjs
+
+::: panel-tabset
+### Capabilities
+
+-   **Code integration** with live execution
+-   **Math rendering** via LaTeX: $E=mc^2$
+-   **Interactive elements** like hover tooltips
+-   **Responsive design** across devices
+
+### Strengths
+
+1.  Version control friendly (Git integration)
+2.  Reproducible research pipeline
+3.  Seamless R/Python integration
+4.  Free/open-source ecosystem
+
+### Weaknesses
+
+1.  Limited drag-and-drop design
+2.  Steeper learning curve
+3.  Fewer built-in templates
+4.  Complex animation controls
+:::
+
+## Presentation Overview
+
+### Link to Published Presentation
+
+[Published Presentation](https://stacey678.quarto.pub/kyochon-chicken-digital-marketing-strategy-for-us-expansion/#/title-slide) {.callout .callout-info}
+
+-   Focuses on **Kyochon Chicken’s U.S. expansion strategy** through **digital marketing insights**.
+-   Covers **market analysis, digital performance evaluation, and recommendations**.
+
+::: panel-tabset
+## Strengths of Reveal.js
+
+-   **Dynamic storytelling** with smooth slide transitions\
+-   **Integration with R/Python** for data visualizations\
+-   **Web-publishing capabilities** for easy sharing
+
+## Weaknesses of Reveal.js
+
+-   Requires **coding knowledge** compared to PowerPoint’s **drag-and-drop interface**\
+-   Custom styling needs additional **CSS/SCSS configuration**
+:::
+
+## Key Takeaways
+
+-   **Structured data storytelling** is crucial for presenting actionable insights.
+
+-   Combining **visuals, analytics, and interactivity** enhances engagement.
+
+-   Reveal.js offers a **powerful alternative to traditional slide decks**, especially for data-driven presentations.
+
+    Data Wrangling Functions Demonstration
+
+# Data Wrangling Functions Demonstration
+
+## 1. Table Merging with `left_join()`
+
+### When to Use
+
+Use `left_join()` when you need to combine two datasets while preserving all records from the primary (left) table, even if there's no match in the secondary table. This is particularly useful for customer-order analysis where we want to see all customers regardless of purchase history.
+
+```{r}
+library(dplyr)
+
+# Customer information
+
+customers <- tibble( 
+  customer_id = c(101, 102, 103), 
+  name = c("Alice Smith", "Bob Wilson", "Charlie Brown") )
+
+# Order records
+
+orders <- tibble( 
+  order_id = c(5001, 5002), 
+  customer_id = c(101, 103), 
+  amount = c(149.99, 299.99) )
+
+merged_data <- left_join(customers, orders, by = "customer_id")
+```
+
+## 2. Data Reshaping with `pivot_wider()`
+
+### When to Use
+
+Employ `pivot_wider()` when converting long-format data to wide format for improved readability, particularly useful for creating summary reports or preparing data for visualization.
+
+```{r}
+library(tidyr)
+
+# Long-format test scores
+test_scores <- tibble(
+  student = rep(c("Amy", "John"), each = 3),
+  subject = rep(c("Math", "Science", "English"), 2),
+  score = c(88, 92, 85, 79, 85, 90)
+)
+
+wide_scores <- test_scores %>% 
+  pivot_wider(
+    names_from = subject,
+    values_from = score
+  )
+```
+
+## 3. String Manipulation with `separate()`
+
+### When to Use
+
+Apply `separate()` when you need to split composite strings into discrete columns, essential for processing raw data exports or preparing address information for geocoding.
+
+```{r}
+# Raw address data
+locations <- tibble(
+  record_id = 1:3,
+  full_address = c(
+    "New York,NY,10001",
+    "Los Angeles,CA,90001",
+    "Chicago,IL,60601")
+)
+
+parsed_addresses <- locations %>%
+  separate(
+    col = full_address,
+    into = c("city", "state", "zip"),
+    sep = ","
+  )
+```
+
+## 
+
+[Published](https://stacey678.quarto.pub/m06-reflection-essay-advanced-data-wrangling/) {.callout .callout-info}

@@ -1,0 +1,203 @@
+---
+title: "Kyochon Chicken: Digital Marketing Strategy for U.S. Expansion"
+subtitle: "Proposal Presentation"
+author: "Goal Diggers Team"
+institute: "IBM 6400, Cal Poly Pomona"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    theme: serif
+    width: 1600
+    height: 900
+    footer: "Kyochon U.S. Expansion"
+    transition: slide
+    transition-speed: default
+    incremental: true
+    toc: true
+    toc-depth: 1
+    slide-number: true
+    scrollable: true
+    smaller: true
+    code-fold: false
+    code-overflow: wrap
+    number-sections: false
+    number-depth: 5
+    embed-resources: true
+    css: styles.css
+editor: visual
+execute: 
+  echo: true
+  freeze: auto
+---
+
+# Table of Contents
+
+-   Introduction & Problem Statement
+-   Analytics Objectives
+-   Market & Competitive Analysis
+-   Digital Marketing Audit
+-   Sentiment & Content Analysis
+-   Data-Driven Recommendations
+-   References
+
+------------------------------------------------------------------------
+
+# Introduction & Problem Statement
+
+## Introduction
+
+-   Kyochon specializes in premium Korean fried chicken.
+-   Strength in Korea, growing in U.S. market.
+
+## Problem Statement
+
+-   Lack of data-driven insights for mainstream consumers.
+-   Niche market vs. broader casual dining opportunities.
+-   Need for strategic adaptation to maintain market growth.
+
+------------------------------------------------------------------------
+
+# Analytics Objectives
+
+1.  **Analyze the Casual Dining & Fried Chicken Markets in LA** *(Stacey)*
+2.  **Evaluate Kyochon Chicken’s Digital Marketing Performance** *(June)*
+3.  **Assess Brand Perception Through Sentiment Analysis** *(Liz)*
+4.  **Develop Data-Driven Digital Marketing Recommendations** *(Angel)*
+
+------------------------------------------------------------------------
+
+# Market & Competitive Analysis
+
+## Industry Overview
+
+-   Korean fried chicken market growing due to K-culture influence.
+-   Need for localized strategies in U.S. expansion.
+
+## Competitive Landscape
+
+-   Strengths: Authentic flavors, ethical ingredients, strong Koreatown presence.
+-   Weaknesses: Premium pricing, digital presence lags competitors, no plant-based options.
+-   Threats: Competitor promotions, suburban expansion, rising demand for plant-based meals.
+
+## Market Analysis Methods
+
+-   **Porter’s Five Forces**: Threat of new entrants, bargaining power of suppliers/buyers.
+-   **GIS Mapping**: Identifying high-traffic areas and customer demographics.
+-   **Market Segmentation**: Analyzing customer data (demographics, psychographics, behaviors).
+
+------------------------------------------------------------------------
+
+# Digital Marketing Audit
+
+## Current Strategies
+
+-   **Website & SEO**: Needs better optimization for key terms.
+-   **Paid Search & Social Ads**: Google Ads, refining social targeting.
+-   **Email & Loyalty Marketing**: Implementing targeted campaigns.
+-   **Influencer Marketing**: Collaborating with K-culture food influencers.
+
+## Performance Analysis
+
+-   **AIDA Model**: Tracking customer journey from attention to conversion.
+-   **SEO Audit**: Evaluating mobile responsiveness, site speed, and content engagement.
+
+------------------------------------------------------------------------
+
+# Sentiment & Content Analysis
+
+## Data Sources
+
+-   Web scraping of **Google Reviews & Yelp** for customer insights.
+-   Tracking customer sentiment changes over time.
+
+## Key Metrics
+
+-   **Review Sentiment Analysis**: Positive, neutral, negative classification.
+-   **Average Star Rating Trends**: Understanding customer satisfaction levels.
+-   **Engagement Metrics**: CTRs, social interactions, campaign effectiveness.
+
+```{r}
+library(ggplot2)
+data <- data.frame(rating = c(5, 4, 3, 2, 1), count = c(120, 80, 40, 20, 10))
+ggplot(data, aes(x=factor(rating), y=count)) + 
+  geom_bar(stat="identity", fill="steelblue") + 
+  theme_minimal() + 
+  labs(title="Customer Ratings Distribution", x="Star Rating", y="Count")
+```
+
+------------------------------------------------------------------------
+
+# Analytics Methods
+
+-   **AO1 (Market Analysis):**
+    -   Porter’s Five Forces
+    -   GIS Mapping
+-   **AO2 (Digital Audit):**
+    -   AIDA Model
+    -   SEO & UX Analysis
+-   **AO3 (Brand Perception):**
+    -   Sentiment Analysis using NLP
+    -   Comparative Benchmarking
+-   **AO4 (Recommendations):**
+    -   Digital Marketing Funnel Framework
+    -   Customer Journey Mapping
+
+```{=html}
+<!-- Speaker Notes:
+We use multiple analytical frameworks to comprehensively evaluate our digital strategy.
+-->
+```
+
+------------------------------------------------------------------------
+
+# Plan of Methods for Each Objective
+
+-   **AO1:** Examine market forces and customer segmentation.
+-   **AO2:** Audit digital channels (website, social media, paid ads) and measure KPIs.
+-   **AO3:** Analyze sentiment from reviews and compare brand perceptions.
+-   **AO4:** Develop targeted recommendations using data-driven insights.
+
+<!-- Fragment: Each objective plan appears incrementally. -->
+
+```{=html}
+<!-- Speaker Notes:
+These methods provide the structure for our detailed analysis and subsequent recommendations.
+-->
+```
+
+------------------------------------------------------------------------
+
+# Recommendations
+
+-   **Social Media:** Launch TikTok campaigns and boost Instagram activity.
+-   **SEO & Website:** Optimize keywords, improve mobile usability, and enhance UX.
+-   **Customer Engagement:** Implement loyalty programs and personalized email marketing.
+-   **Operational Efficiency:** Improve response times and overall service quality.
+
+```{=html}
+<!-- Speaker Notes:
+Our recommendations are designed to address digital gaps and strengthen our competitive position.
+-->
+```
+
+------------------------------------------------------------------------
+
+# Asides & Footnotes
+
+> **Note:** A strong digital presence is essential for capturing today’s market.
+>
+> *Footnote:* See Browning et al. (2013) for insights on the influence of online reviews.
+
+```{=html}
+<!-- Speaker Notes:
+Asides and footnotes add extra context without cluttering the main slides.
+-->
+```
+
+------------------------------------------------------------------------
+
+# References
+
+-   Armstrong G, Kotler P, Harker M, Brennan R. *Marketing: An Introduction*. Pearson, 2022.
+-   Chaffey D, Ellis-Chadwick F. *Digital Marketing: Strategy, Implementation, and Practice*. Pearson, 2022.
+-   IBISWorld. *Fast Food Restaurants in the U.S.*, 2024.
