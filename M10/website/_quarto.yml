@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "My Quarto Website"
+  navbar:
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "Dashboard"
+        file: dashboard.qmd
+      - text: "Shiny Apps"
+        file: shiny-apps.qmd
+      - text: "Shinylive"
+        file: shinylive.qmd
+format:
+  html:
+    theme: cosmo
+    toc: true

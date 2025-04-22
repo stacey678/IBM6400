@@ -1,0 +1,33 @@
+---
+title: "Essay on Shinylive"
+format: html
+---
+
+# Introduction to Shinylive
+
+**Shinylive** lets you run Shiny apps directly in the browser—without needing a server—by using WebAssembly to run R.
+
+## How It Works
+- Converts R to run in the browser
+- Apps are deployed as static HTML + JavaScript
+- Ideal for educational demos or marketing presentations
+
+## Comparison: Shiny vs. Shinylive
+
+| Feature        | Shiny (Traditional) | Shinylive         |
+|----------------|---------------------|--------------------|
+| Server Needed? | Yes                 | No (serverless)    |
+| Ideal For      | Internal tools      | Public examples    |
+| Hosting        | Shinyapps.io, local | GitHub Pages, Quarto Pub |
+
+## Pros & Cons
+
+**Pros:**
+- No backend setup required
+- Easier and faster to share
+- Works well for static, read-only dashboards
+
+**Cons:**
+- Limited interactivity (no database access)
+- Not ideal for real-time, user-authenticated apps
+---

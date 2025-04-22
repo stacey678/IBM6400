@@ -1,0 +1,32 @@
+---
+title: "Essay on Shiny Apps"
+format: html
+---
+
+# Introduction to Shiny
+
+Shiny is an R package that allows users to build interactive web apps directly in R. It’s especially useful in digital marketing analytics for creating real-time data dashboards and reports.
+
+## Key Components
+- **UI (User Interface)**: Controls layout and inputs/outputs
+- **Server**: Processes data and creates reactivity
+- **Reactivity**: Updates outputs when inputs change
+
+## Example Shiny App
+
+```{r}
+library(shiny)
+ui <- fluidPage(
+  titlePanel("User Selection Example"),
+  sliderInput("num", "Choose a number", 1, 100, 50),
+  textOutput("result")
+)
+
+server <- function(input, output) {
+  output$result <- renderText({
+    paste("You selected:", input$num)
+  })
+}
+
+shinyApp(ui = ui, server = server)
+```

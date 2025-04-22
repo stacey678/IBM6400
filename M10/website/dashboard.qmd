@@ -1,0 +1,79 @@
+---
+title: "Digital Marketing Dashboard"
+format:
+  dashboard:
+    theme: minty  
+    page-layout: full
+    sidebar: false
+    reader-mode: false
+---
+
+
+
+```{r}
+# Load required packages and data
+library(shiny) 
+library(ggplot2) 
+library(dplyr)
+
+#Load mpg dataset
+data(mpg)
+```
+
+## Row
+
+### Column{width=300}
+```{r}
+#| title: "Filter by Class"
+#| echo: false
+
+selectInput("class", "Choose vehicle class:",
+            choices = unique(mpg$class),
+            selected = "suv")
+
+```
+
+```{r}
+#| title: "Filter by Manufacturer"
+#| echo: false
+
+selectInput("manufacturer", "Choose manufacturer:",
+            choices = unique(mpg$manufacturer),
+            selected = "toyota")
+
+```
+
+## Column
+```{r}
+#| title: "Displacement vs Highway MPG"
+#| echo: false
+
+renderPlot({
+  filtered <- mpg %>%
+    filter(class == input$class,
+           manufacturer == input$manufacturer)
+  
+  ggplot(filtered, aes(x = displ, y = hwy)) +
+    geom_point(color = "steelblue", size = 3) +
+    labs(
+      x = "Engine Displacement (L)",
+      y = "Highway MPG",
+      title = paste("MPG for", input$manufacturer, input$class)
+    ) +
+    theme_minimal()
+})
+```
+```{r}
+#| title: "Summary Table"
+#| echo: false
+
+renderTable({
+  mpg %>%
+    filter(class == input$class,
+           manufacturer == input$manufacturer) %>%
+    group_by(model) %>%
+    summarise(avg_cty = mean(cty),
+              avg_hwy = mean(hwy),
+              .groups = "drop")
+})
+```

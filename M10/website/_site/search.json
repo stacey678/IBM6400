@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "shinylive.html",
+    "href": "shinylive.html",
+    "title": "Essay on Shinylive",
+    "section": "",
+    "text": "Shinylive lets you run Shiny apps directly in the browser—without needing a server—by using WebAssembly to run R.\n\n\n\nConverts R to run in the browser\nApps are deployed as static HTML + JavaScript\nIdeal for educational demos or marketing presentations\n\n\n\n\n\n\n\nFeature\nShiny (Traditional)\nShinylive\n\n\n\n\nServer Needed?\nYes\nNo (serverless)\n\n\nIdeal For\nInternal tools\nPublic examples\n\n\nHosting\nShinyapps.io, local\nGitHub Pages, Quarto Pub\n\n\n\n\n\n\nPros: - No backend setup required - Easier and faster to share - Works well for static, read-only dashboards\nCons: - Limited interactivity (no database access) - Not ideal for real-time, user-authenticated apps"
+  },
+  {
+    "objectID": "shinylive.html#how-it-works",
+    "href": "shinylive.html#how-it-works",
+    "title": "Essay on Shinylive",
+    "section": "",
+    "text": "Converts R to run in the browser\nApps are deployed as static HTML + JavaScript\nIdeal for educational demos or marketing presentations"
+  },
+  {
+    "objectID": "shinylive.html#comparison-shiny-vs.-shinylive",
+    "href": "shinylive.html#comparison-shiny-vs.-shinylive",
+    "title": "Essay on Shinylive",
+    "section": "",
+    "text": "Feature\nShiny (Traditional)\nShinylive\n\n\n\n\nServer Needed?\nYes\nNo (serverless)\n\n\nIdeal For\nInternal tools\nPublic examples\n\n\nHosting\nShinyapps.io, local\nGitHub Pages, Quarto Pub"
+  },
+  {
+    "objectID": "shinylive.html#pros-cons",
+    "href": "shinylive.html#pros-cons",
+    "title": "Essay on Shinylive",
+    "section": "",
+    "text": "Pros: - No backend setup required - Easier and faster to share - Works well for static, read-only dashboards\nCons: - Limited interactivity (no database access) - Not ideal for real-time, user-authenticated apps"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Website",
+    "section": "",
+    "text": "My Photo"
+  },
+  {
+    "objectID": "index.html#career-aspiration",
+    "href": "index.html#career-aspiration",
+    "title": "Welcome to My Website",
+    "section": "🎯 Career Aspiration",
+    "text": "🎯 Career Aspiration\nTo become a data-driven digital marketing analyst or strategist, helping brands enhance their online presence and campaign effectiveness."
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "Welcome to My Website",
+    "section": "💼 Skills",
+    "text": "💼 Skills\n\nRStudio (Data Wrangling, Visualization, Shiny)\nSQL\nDigital Marketing Analytics (Google Analytics, SEO, Campaign Analysis)\nDashboard Development (Flexdashboard, Quarto)\nData Storytelling & Reporting"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Welcome to My Website",
+    "section": "🎓 Education",
+    "text": "🎓 Education\n\nM.S. in Digital Marketing, Cal Poly Pomona"
+  },
+  {
+    "objectID": "dashboard.html",
+    "href": "dashboard.html",
+    "title": "My Quarto Website",
+    "section": "",
+    "text": "Filter by Class\n\n\n\n\nChoose vehicle class:\n\ncompact\nmidsize\nsuv\n2seater\nminivan\npickup\nsubcompact\n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\nFilter by Manufacturer\n\n\n\n\nChoose manufacturer:\n\naudi\nchevrolet\ndodge\nford\nhonda\nhyundai\njeep\nland rover\nlincoln\nmercury\nnissan\npontiac\nsubaru\ntoyota\nvolkswagen\n\n\n\n\n\n\n    \n    \n        \n    \n\n\n\n\n\n\nDisplacement vs Highway MPG\n\n\n\n\n\n\n\n    \n    \n        \n    \n\n\nSummary Table"
+  },
+  {
+    "objectID": "shiny-apps.html",
+    "href": "shiny-apps.html",
+    "title": "Essay on Shiny Apps",
+    "section": "",
+    "text": "Shiny is an R package that allows users to build interactive web apps directly in R. It’s especially useful in digital marketing analytics for creating real-time data dashboards and reports.\n\n\n\nUI (User Interface): Controls layout and inputs/outputs\nServer: Processes data and creates reactivity\nReactivity: Updates outputs when inputs change\n\n\n\n\n\nlibrary(shiny)\nui &lt;- fluidPage(\n  titlePanel(\"User Selection Example\"),\n  sliderInput(\"num\", \"Choose a number\", 1, 100, 50),\n  textOutput(\"result\")\n)\n\nserver &lt;- function(input, output) {\n  output$result &lt;- renderText({\n    paste(\"You selected:\", input$num)\n  })\n}\n\nshinyApp(ui = ui, server = server)\n\nShiny applications not supported in static R Markdown documents"
+  },
+  {
+    "objectID": "shiny-apps.html#key-components",
+    "href": "shiny-apps.html#key-components",
+    "title": "Essay on Shiny Apps",
+    "section": "",
+    "text": "UI (User Interface): Controls layout and inputs/outputs\nServer: Processes data and creates reactivity\nReactivity: Updates outputs when inputs change"
+  },
+  {
+    "objectID": "shiny-apps.html#example-shiny-app",
+    "href": "shiny-apps.html#example-shiny-app",
+    "title": "Essay on Shiny Apps",
+    "section": "",
+    "text": "library(shiny)\nui &lt;- fluidPage(\n  titlePanel(\"User Selection Example\"),\n  sliderInput(\"num\", \"Choose a number\", 1, 100, 50),\n  textOutput(\"result\")\n)\n\nserver &lt;- function(input, output) {\n  output$result &lt;- renderText({\n    paste(\"You selected:\", input$num)\n  })\n}\n\nshinyApp(ui = ui, server = server)\n\nShiny applications not supported in static R Markdown documents"
+  }
+]
