@@ -1,0 +1,18 @@
+---
+title: "Welcome"
+format: html
+---
+
+Hi, My name is Luyao Liu and I am a Master student of Digital Marketing passionate about data-driven strategies and brand innovation. This portfolio showcases my work in marketing analytics and digital strategy.
+
+### 🎯 Personal Statement
+
+> I'm a digital marketing strategist currently pursuing my M.S. in Digital Marketing at Loyola Marymount University, with a strong interest in brand development, content strategy, and performance analytics. I enjoy using tools like Google Analytics, Brandwatch, and Meta Ads to turn data into actionable insights that drive campaign success. One of my recent projects involved leading the digital strategy for Kyochon Chicken's U.S. market, where I developed a content and engagement plan that increased audience interaction by 35%. I'm passionate about combining creative thinking with data-driven decision-making to help brands grow in a fast-paced, digital-first world.
+>
+> ### 🔍 Featured Project: Kyochon Chicken U.S. Digital Strategy
+>
+> As part of a team project, I led the strategy for enhancing Kyochon Chicken’s digital presence in the U.S. market. Through audience segmentation, competitor benchmarking, and content strategy, we achieved a 35% engagement lift and improved ad targeting effectiveness.
+>
+> ------------------------------------------------------------------------
+
+[Download Resume](resume.pdf)

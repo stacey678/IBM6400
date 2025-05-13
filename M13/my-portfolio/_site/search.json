@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "Marketing.html",
+    "href": "Marketing.html",
+    "title": "Marketing Analytics",
+    "section": "",
+    "text": "Welcome! This page showcases how I apply analytics to improve digital marketing performance through dashboards, segmentation, and experimentation.\n\n\n\n\nGoal: Improve digital engagement and ad targeting\n\nTools: Brandwatch, Meta Business Suite, R\n\nMethods: Sentiment analysis, CTR tracking, audience segmentation\n\nResult: +35% engagement rate, better retargeting performance\n\n\n\n\n\nTested two landing page designs.\n\nVersion B saw an 18% higher conversion rate\nBounce rate dropped by 22%\n\n\n\n\n\n# Sample visualization using ggplot2\nset.seed(123)\ndata &lt;- data.frame(spend = runif(50, 10, 100), visits = runif(50, 1, 10))\nclusters &lt;- kmeans(data, centers = 3)\ndata$cluster &lt;- as.factor(clusters$cluster)\nlibrary(ggplot2)\nggplot(data, aes(x = spend, y = visits, color = cluster)) +\n  geom_point(size = 2) +\n  labs(title = \"Customer Segmentation by Spend & Visits\")"
+  },
+  {
+    "objectID": "Marketing.html#kyochon-chicken-analytics-project",
+    "href": "Marketing.html#kyochon-chicken-analytics-project",
+    "title": "Marketing Analytics",
+    "section": "",
+    "text": "Goal: Improve digital engagement and ad targeting\n\nTools: Brandwatch, Meta Business Suite, R\n\nMethods: Sentiment analysis, CTR tracking, audience segmentation\n\nResult: +35% engagement rate, better retargeting performance"
+  },
+  {
+    "objectID": "Marketing.html#ab-test-landing-page-optimization",
+    "href": "Marketing.html#ab-test-landing-page-optimization",
+    "title": "Marketing Analytics",
+    "section": "",
+    "text": "Tested two landing page designs.\n\nVersion B saw an 18% higher conversion rate\nBounce rate dropped by 22%"
+  },
+  {
+    "objectID": "Marketing.html#customer-segmentation-r-k-means-example",
+    "href": "Marketing.html#customer-segmentation-r-k-means-example",
+    "title": "Marketing Analytics",
+    "section": "",
+    "text": "# Sample visualization using ggplot2\nset.seed(123)\ndata &lt;- data.frame(spend = runif(50, 10, 100), visits = runif(50, 1, 10))\nclusters &lt;- kmeans(data, centers = 3)\ndata$cluster &lt;- as.factor(clusters$cluster)\nlibrary(ggplot2)\nggplot(data, aes(x = spend, y = visits, color = cluster)) +\n  geom_point(size = 2) +\n  labs(title = \"Customer Segmentation by Spend & Visits\")"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Email: liuluyao69@gmail.com\nLinkedIn: https://www.linkedin.com/in/luyao-liu-174641153/"
+  },
+  {
+    "objectID": "resume.html#education",
+    "href": "resume.html#education",
+    "title": "Resume",
+    "section": "Education",
+    "text": "Education\nM.S. in Digital Marketing, California State Polytechnic University, Pomona\nExpected Aug 2025"
+  },
+  {
+    "objectID": "resume.html#experience",
+    "href": "resume.html#experience",
+    "title": "Resume",
+    "section": "💼 Experience",
+    "text": "💼 Experience\nDigital Strategy Project – Kyochon Chicken\n\nLed campaign analysis and content strategy\nBuilt performance reports and dashboards\nDelivered a +35% engagement boost"
+  },
+  {
+    "objectID": "resume.html#skills",
+    "href": "resume.html#skills",
+    "title": "Resume",
+    "section": "Skills",
+    "text": "Skills\n\nDigital Strategy, Content Marketing, SEO, Brand Positioning\n\nMeta Ads, TikTok Ads, Google Analytics, Canva, Tableau\n\nR, Python (basic), SQL (basic)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Hi, My name is Luyao Liu and I am a Master student of Digital Marketing passionate about data-driven strategies and brand innovation. This portfolio showcases my work in marketing analytics and digital strategy.\n\n🎯 Personal Statement\n\nI’m a digital marketing strategist currently pursuing my M.S. in Digital Marketing at Loyola Marymount University, with a strong interest in brand development, content strategy, and performance analytics. I enjoy using tools like Google Analytics, Brandwatch, and Meta Ads to turn data into actionable insights that drive campaign success. One of my recent projects involved leading the digital strategy for Kyochon Chicken’s U.S. market, where I developed a content and engagement plan that increased audience interaction by 35%. I’m passionate about combining creative thinking with data-driven decision-making to help brands grow in a fast-paced, digital-first world.\n🔍 Featured Project: Kyochon Chicken U.S. Digital Strategy\nAs part of a team project, I led the strategy for enhancing Kyochon Chicken’s digital presence in the U.S. market. Through audience segmentation, competitor benchmarking, and content strategy, we achieved a 35% engagement lift and improved ad targeting effectiveness.\n\n\nDownload Resume"
+  },
+  {
+    "objectID": "digital marketing.html",
+    "href": "digital marketing.html",
+    "title": "Digital Marketing",
+    "section": "",
+    "text": "Problem: Limited U.S. brand recognition\n\nSolution: Developed Instagram content strategy, ran TikTok ad test, SEO fixes\n\nResults: +22% reach, consistent brand visuals, 3 new Gen Z-focused concepts"
+  },
+  {
+    "objectID": "digital marketing.html#kyochon-chicken-u.s.-strategy",
+    "href": "digital marketing.html#kyochon-chicken-u.s.-strategy",
+    "title": "Digital Marketing",
+    "section": "",
+    "text": "Problem: Limited U.S. brand recognition\n\nSolution: Developed Instagram content strategy, ran TikTok ad test, SEO fixes\n\nResults: +22% reach, consistent brand visuals, 3 new Gen Z-focused concepts"
+  },
+  {
+    "objectID": "digital marketing.html#social-media-calendar-local-campaign",
+    "href": "digital marketing.html#social-media-calendar-local-campaign",
+    "title": "Digital Marketing",
+    "section": "📣 Social Media Calendar – Local Campaign",
+    "text": "📣 Social Media Calendar – Local Campaign\n\nCreated 3-month content plan using Buffer and Canva\n\nIncreased Instagram engagement by 40%"
+  },
+  {
+    "objectID": "digital marketing.html#seo-strategy-for-small-business",
+    "href": "digital marketing.html#seo-strategy-for-small-business",
+    "title": "Digital Marketing",
+    "section": "🔍 SEO Strategy for Small Business",
+    "text": "🔍 SEO Strategy for Small Business\n\nConducted site audit and keyword analysis\n\nOptimized meta descriptions and page structure\n\nImproved SERP rank from #9 to #3 in 2 months"
+  },
+  {
+    "objectID": "digital marketing.html#brand-positioning-gen-z-refresh",
+    "href": "digital marketing.html#brand-positioning-gen-z-refresh",
+    "title": "Digital Marketing",
+    "section": "✍️ Brand Positioning: Gen Z Refresh",
+    "text": "✍️ Brand Positioning: Gen Z Refresh\n\nBuilt brand persona\n\nCrafted a new visual tone for Instagram\n\nConducted A/B testing on taglines"
+  }
+]

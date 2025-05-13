@@ -1,0 +1,42 @@
+---
+title: "Marketing Analytics"
+format: html
+---
+
+# Data-Driven Marketing Projects
+
+Welcome! This page showcases how I apply analytics to improve digital marketing performance through dashboards, segmentation, and experimentation.
+
+------------------------------------------------------------------------
+
+## 📌 Kyochon Chicken Analytics Project
+
+-   **Goal**: Improve digital engagement and ad targeting\
+-   **Tools**: Brandwatch, Meta Business Suite, R\
+-   **Methods**: Sentiment analysis, CTR tracking, audience segmentation\
+-   **Result**: +35% engagement rate, better retargeting performance
+
+------------------------------------------------------------------------
+
+## 🧪 A/B Test: Landing Page Optimization
+
+**Tested** two landing page designs.
+
+-   **Version B** saw an **18% higher conversion rate**
+-   **Bounce rate** dropped by 22%
+
+------------------------------------------------------------------------
+
+## 🔍 Customer Segmentation (R K-Means Example)
+
+``` r
+# Sample visualization using ggplot2
+set.seed(123)
+data <- data.frame(spend = runif(50, 10, 100), visits = runif(50, 1, 10))
+clusters <- kmeans(data, centers = 3)
+data$cluster <- as.factor(clusters$cluster)
+library(ggplot2)
+ggplot(data, aes(x = spend, y = visits, color = cluster)) +
+  geom_point(size = 2) +
+  labs(title = "Customer Segmentation by Spend & Visits")
+```

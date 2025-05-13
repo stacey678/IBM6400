@@ -1,0 +1,34 @@
+---
+title: "Resume"
+format: html
+---
+
+**Email**: liuluyao69\@gmail.com\
+**LinkedIn**: <https://www.linkedin.com/in/luyao-liu-174641153/>
+
+------------------------------------------------------------------------
+
+## Education
+
+**M.S. in Digital Marketing**, **California State Polytechnic University, Pomona**\
+Expected Aug 2025
+
+------------------------------------------------------------------------
+
+## 💼 Experience
+
+**Digital Strategy Project – Kyochon Chicken**
+
+-   Led campaign analysis and content strategy
+
+-   Built performance reports and dashboards
+
+-   Delivered a +35% engagement boost
+
+------------------------------------------------------------------------
+
+## Skills
+
+-   Digital Strategy, Content Marketing, SEO, Brand Positioning\
+-   Meta Ads, TikTok Ads, Google Analytics, Canva, Tableau\
+-   R, Python (basic), SQL (basic)

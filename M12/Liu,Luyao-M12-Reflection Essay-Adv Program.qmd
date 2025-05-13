@@ -1,0 +1,146 @@
+---
+---
+title: "Marketing Automation"
+subtitle: "Revealjs Presentation"
+author: "Luyao Liu"
+institute: "IBM6400, Cal Poly Pomona"
+date: "May 5, 2025"
+format: 
+  revealjs:
+    theme: serif
+    width: 1600
+    height: 900
+    footer: Reflection Essay-Adv Program
+    transition: slide
+    transition-speed: default
+    incremental: false
+    toc: true
+    toc-depth: 1
+    slide-number: true
+    scrollable: true
+    smaller: true
+    code-fold: false
+    code-overflow: wrap
+    number-sections: false
+    number-depth: 5
+    embed-resources: true
+    css: styles.css
+editor: visual
+execute: 
+  echo: true
+  freeze: auto
+---
+
+## Welcome
+
+### Reflection Essay-Adv Program: M12 Reflective Essay
+
+This presentation summarizes key takeaways from the final module, including reflections on dashboards, parameterized reports, and Quarto in the era of AI.
+
+------------------------------------------------------------------------
+
+## Step 1: Interactive Dashboard in Quarto
+
+### 📌 Prompt:
+
+What did you like about the Quarto-based Interactive dashboard compared with other options introduced in this class previously?
+
+::: columns
+✅ Response:
+
+-   Dr. Albert Rapp’s demonstration on creating interactive dashboards using Quarto helped clarify how flexible and efficient this tool is. Compared to Shiny or Tableau, Quarto allows for fully integrated, code-driven dashboards that can be exported as self-contained HTML files without the need for a server or license. I appreciated the seamless integration of R code and narrative, which allowed us to produce a dashboard for the Kyochon Chicken project that was easy to maintain and share. Its lightness and reproducibility made it especially effective for quick iterations and presentations to stakeholders who need a portable and straightforward overview.
+:::
+
+Note:
+
+Quarto allowed us to integrate code, analysis, and visuals into one file—perfect for client-friendly dashboards.
+
+------------------------------------------------------------------------
+
+## Step 2: Parameterized Reporting
+
+### 📌Prompt:
+
+Explain what parameterized reporting is and how it works. Do you see the application of it in your workflow in your current or past jobs (or future jobs)?
+
+::: columns
+✅ Response:
+
+-   Parameterized reporting allows you to customize the same report structure with different input values. In Quarto, parameters are defined in the YAML front matter and then accessed in the document using `params$...`. For example, we could set `params: location: "Los Angeles"` and generate a report filtered for that location's data. This feature is powerful for automating repetitive reporting tasks, such as generating franchise-specific insights for multiple Kyochon locations. In future roles—particularly in analytics or consulting—this will be invaluable for creating scalable, customized reports for clients or departments.
+:::
+
+Note:
+
+This will be useful in any job requiring franchise, department, or client-level custom reports.
+
+------------------------------------------------------------------------
+
+## Step 3: Avoiding Dashboard Fatigue
+
+### 📌 Prompt:
+
+What are Sean Nguyen's suggestions for helping your colleagues pay attention to your dashboard/report?
+
+::: columns
+✅ Response:
+
+-   In Sean Nguyen’s talk, he emphasized how dashboards often go unread due to their static and overused nature. Instead, he advocates for dynamic storytelling—integrating narratives with embedded visuals, using email summaries, and offering concise takeaways. This insight resonated with our Kyochon Chicken project: we found it more effective to include key metrics and visualizations directly in executive updates rather than asking stakeholders to visit a dashboard. By embedding meaning into the report, not just data, we improve engagement and ensure the analysis drives decisions.
+:::
+
+Note:
+
+We revised our strategy by embedding a key visualization in our Kyochon update emails with quick takeaways.
+
+------------------------------------------------------------------------
+
+## Challenges in Learning Quarto Tools
+
+### 📌 Prompt:
+
+Share some of the challenges you might have had learning Quarto and Revealjs.
+
+::: columns
+✅ Response:
+
+-   Although Quarto is user-friendly, some parts of the Revealjs format were challenging. YAML syntax errors were common and sometimes hard to debug. Customizing layouts with CSS or creating columns required some trial and error. Managing scrolling content and aligning visual elements precisely on slides also took time. However, these challenges were worthwhile, as the Revealjs format forced me to think about communication, not just code.
+:::
+
+Note:
+
+Despite the challenges, I now feel more confident in producing professional reports.
+
+------------------------------------------------------------------------
+
+## Final Reflections on Quarto & Literate Programming
+
+### 📌 Prompt:
+
+Share your thoughts about learning Quarto, literate programming, and reproducible reports. How will you use this knowledge in the AI era?
+
+::: columns
+✅ Response:
+
+-   This course taught me the true value of literate programming—combining code, explanation, and presentation in one place. Quarto empowered us to not just analyze data, but to **tell a story with it**. This is especially crucial in an age where attention is limited and insights must be both compelling and actionable. Looking ahead, I see Quarto playing a role in AI-enhanced reporting: pairing it with tools like ChatGPT to automate templated reports, summarize results, and deliver them in human-readable formats. The combination of automation, reproducibility, and storytelling is where modern analytics needs to go—and I’m excited to be part of that shift.
+:::
+
+Note:
+
+Quarto will be part of my long-term reporting and data storytelling workflow, enhanced by generative AI tools.
+
+------------------------------------------------------------------------
+
+## References
+
+-   Rapp, A. (2023). \*Interactive Dashboards in Quarto\*. YouTube.
+
+-   Nguyen, S. (2023). \*Beyond Dashboards\*. YouTube.
+
+-   Yelp Fusion API for Kyochon Data
+
+------------------------------------------------------------------------
+
+## Thank You
+
+Presentation by Luyao Liu
+
+IBM6400 – Advanced Programming in R

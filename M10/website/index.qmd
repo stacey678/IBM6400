@@ -3,26 +3,28 @@ title: "Welcome to My Website"
 format: html
 ---
 
-<div style="text-align: center;">
-  ![My Photo](my-photo.jpg){width=200px}
-</div>
-
+::: {style="text-align: center;"}
+![My Photo](my-photo.jpg){width="200px"}
+:::
 
 # About Me
 
 Hi! My name is Luyao Liu. I'm a master's student in **Digital Marketing** at **Cal Poly Pomona**, passionate about using data to understand consumer behavior and optimize digital strategies. I enjoy creating interactive dashboards and tools that tell compelling stories from data.
 
 ## 🎯 Career Aspiration
+
 To become a data-driven digital marketing analyst or strategist, helping brands enhance their online presence and campaign effectiveness.
 
 ## 💼 Skills
-- RStudio (Data Wrangling, Visualization, Shiny)
-- SQL
-- Digital Marketing Analytics (Google Analytics, SEO, Campaign Analysis)
-- Dashboard Development (Flexdashboard, Quarto)
-- Data Storytelling & Reporting
+
+-   RStudio (Data Wrangling, Visualization, Shiny)
+-   SQL
+-   Digital Marketing Analytics (Google Analytics, SEO, Campaign Analysis)
+-   Dashboard Development (Flexdashboard, Quarto)
+-   Data Storytelling & Reporting
 
 ## 🎓 Education
-- M.S. in Digital Marketing, Cal Poly Pomona
 
----
+-   M.S. in Digital Marketing, Cal Poly Pomona
+
+------------------------------------------------------------------------
